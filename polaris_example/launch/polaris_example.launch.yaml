@@ -1,0 +1,12 @@
+# Main launch file for 
+# NDI Tracker node from the DVRK software
+launch:
+    - node:
+        pkg: 'ndi_tracker'
+        exec: 'ndi_tracker'
+        name: 'ndi_tracker'
+        output: 'screen'
+        
+        # -j is config jason file location, -P is reading/publishing period in seconds
+        args: '-j /src/lecture10_examples/polaris_example/share/polaris_example.json -P 0.05'
+    
