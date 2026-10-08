@@ -10,3 +10,9 @@ launch:
         # -j is config jason file location, -P is reading/publishing period in seconds
         args: '-j /src/lecture10_examples/polaris_example/share/polaris_example.json -P 0.05'
     
+    - node:
+        pkg: 'polaris_example'
+        exec: 'error_metrics'
+        name: 'error_metrics'
+        output: 'screen'
+    
