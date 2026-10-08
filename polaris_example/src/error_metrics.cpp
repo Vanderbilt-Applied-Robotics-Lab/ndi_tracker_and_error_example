@@ -18,7 +18,7 @@ void ErrorMetrics::computeMetrics()
         Eigen::AngleAxisd ax_ang = Eigen::AngleAxisd(rotation);
 
         RCLCPP_INFO(this->get_logger(), "Distance: %0.2f m", translation.norm());
-        RCLCPP_INFO(this->get_logger(), "Angular distance: %0.2f deg", ax_ang.angle()*M_PI/180.0);
+        RCLCPP_INFO(this->get_logger(), "Angular distance: %0.2f deg", ax_ang.angle()*180.0/M_PI);
     }
     catch (const tf2::TransformException & ex)
     {
